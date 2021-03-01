@@ -1,0 +1,38 @@
+.image {
+  height: 50vh;
+  width: 50vw;
+  border-radius: 10px;
+}
+
+.left {
+  font-size: 3rem;
+  cursor: pointer;
+  color: black;
+  margin-top: 10%;
+  user-select: none;
+}
+.left :hover {
+  opacity: 0.5;
+}
+
+.right {
+  font-size: 3rem;
+  cursor: pointer;
+  color: black;
+  margin-top: 10%;
+  user-select: none;
+}
+.right :hover {
+  opacity: 0.5;
+}
+
+.slide {
+  opacity: 0;
+  animation-duration: 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}
