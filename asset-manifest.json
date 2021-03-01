@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/E-Commerce-Moreno/static/css/main.6d327622.chunk.css",
+    "main.js": "/E-Commerce-Moreno/static/js/main.5da760ec.chunk.js",
+    "main.js.map": "/E-Commerce-Moreno/static/js/main.5da760ec.chunk.js.map",
+    "runtime-main.js": "/E-Commerce-Moreno/static/js/runtime-main.86c61889.js",
+    "runtime-main.js.map": "/E-Commerce-Moreno/static/js/runtime-main.86c61889.js.map",
+    "static/js/2.ca7bb360.chunk.js": "/E-Commerce-Moreno/static/js/2.ca7bb360.chunk.js",
+    "static/js/2.ca7bb360.chunk.js.map": "/E-Commerce-Moreno/static/js/2.ca7bb360.chunk.js.map",
+    "static/js/3.3e119720.chunk.js": "/E-Commerce-Moreno/static/js/3.3e119720.chunk.js",
+    "static/js/3.3e119720.chunk.js.map": "/E-Commerce-Moreno/static/js/3.3e119720.chunk.js.map",
+    "index.html": "/E-Commerce-Moreno/index.html",
+    "static/css/main.6d327622.chunk.css.map": "/E-Commerce-Moreno/static/css/main.6d327622.chunk.css.map",
+    "static/js/2.ca7bb360.chunk.js.LICENSE.txt": "/E-Commerce-Moreno/static/js/2.ca7bb360.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.86c61889.js",
+    "static/js/2.ca7bb360.chunk.js",
+    "static/css/main.6d327622.chunk.css",
+    "static/js/main.5da760ec.chunk.js"
+  ]
+}
