@@ -1,5 +1,6 @@
 import "./App.css";
 import AppEngine from "./AppEngine";
+import * as firebase from "firebase";
 
 function App() {
   return (
