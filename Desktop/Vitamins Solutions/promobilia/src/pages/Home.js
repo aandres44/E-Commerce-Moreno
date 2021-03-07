@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import Carousel from "./Carousel";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -13,7 +14,9 @@ const Home = () => {
         </h3>
       </Header>
       <Carousel></Carousel>
-      <Butt>Ver propiedades</Butt>
+      <Link to={"/propiedades"}>
+        <Butt>Ver propiedades</Butt>
+      </Link>
       <About>
         <h1 style={{ fontFamily: "Lucida Sans", marginTop: "0px" }}>
           ¿Quienes somos?
