@@ -1,4 +1,4 @@
-import react, { useState } from "react";
+import { useState } from "react";
 import styled from "@emotion/styled";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 import "./carousel.css";
@@ -55,7 +55,7 @@ const Carousel = () => {
             key={index}
           >
             {index === current && (
-              <img src={obj.image} alt="Image" className="image" />
+              <img src={obj.image} alt="Property" className="image" />
             )}
           </div>
         );
