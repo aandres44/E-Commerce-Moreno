@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
+import { BiBed } from "react-icons/bi";
+import { AiOutlineCar } from "react-icons/ai";
+import { GrRestroom } from "react-icons/gr";
+import { GiShower } from "react-icons/gi";
 
 export default function Card(props) {
   let newClassName = `color_bg ${props.alt}`;
   let bg_img = `url(${props.images})`;
-  let { title, old_price, newPrice, exp_date } = props;
+  let {
+    title,
+    old_price,
+    newPrice,
+    exp_date,
+    cars,
+    bedrooms,
+    bathrooms,
+    showers,
+  } = props;
+
   return (
     <div className="card">
       <div className="warpper">
@@ -30,16 +44,27 @@ export default function Card(props) {
               <p className="price old_price">{old_price}</p>
               <p className="price newPrice">{newPrice}</p>
             </div>
-            <div className="cart">
-              <svg
-                className="outCart"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 64 64"
-              >
-                <path d="M2 6h10l10 40h32l8-24H16"></path>
-                <circle cx="23" cy="54" r="4"></circle>
-                <circle cx="49" cy="54" r="4"></circle>
-              </svg>
+            <div>
+              <h5 style={{ textDecoration: "underline purple" }}>
+                <span>
+                  <BiBed />
+                </span>
+                {"             "} {bedrooms}
+                <span>
+                  <AiOutlineCar />
+                </span>{" "}
+                {cars}
+              </h5>
+              <h5 style={{ textDecoration: "underline purple" }}>
+                <span>
+                  <GrRestroom />
+                </span>
+                {bathrooms}{" "}
+                <span>
+                  <GiShower />
+                </span>{" "}
+                {showers}
+              </h5>
             </div>
           </div>
         </div>

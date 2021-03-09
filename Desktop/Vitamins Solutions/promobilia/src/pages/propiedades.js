@@ -5,36 +5,7 @@ import { Link } from "react-router-dom";
 import firebase from "../firebase";
 
 function Propiedades() {
-  const [id, setId] = useState("");
-  const [category, setCategory] = useState("");
-  const [status, setStatus] = useState("");
-  const [prize, setPrize] = useState(0);
-  const [place, setPlace] = useState("");
-  const [data, setData] = useState([
-    {
-      title: "Loft",
-      image: "https://d15jm47acbjce0.cloudfront.net/s838x629_1460146289338.JPG",
-      old_price: 900,
-      newPrice: "México, Quintanta Roo",
-      alt: "batman",
-      exp_date: "Renta",
-      path: "/propiedad",
-    },
-  ]);
-
-  const handleClick = () => {
-    const globalRef = firebase.database().ref().child("Global");
-    const populationRef = globalRef.child("population");
-    const obj = {
-      category: category,
-      status: status,
-      prize: prize,
-      place: place,
-      id: id,
-    };
-
-    populationRef.push(obj);
-  };
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     const rootRef = firebase.database().ref().child("Global");
@@ -52,6 +23,10 @@ function Propiedades() {
           alt: "batman",
           exp_date: obj[id]["status"],
           path: `/propiedad/${obj[id]["id"]}`,
+          bathrooms: obj[id]["bathrooms"],
+          cars: obj[id]["cars"],
+          showers: obj[id]["showers"],
+          bedrooms: obj[id]["bedrooms"],
         });
       }
       console.log(value);
@@ -75,54 +50,15 @@ function Propiedades() {
                 newPrice={obj.newPrice}
                 alt={obj.alt}
                 exp_date={obj.exp_date}
+                cars={obj.cars}
+                bathrooms={obj.bathrooms}
+                showers={obj.showers}
+                bedrooms={obj.bedrooms}
               ></Card>
             </Link>
           );
         })}
       </div>
-      <form style={{ marginTop: "300vh" }} action="">
-        <input
-          type="text"
-          name="property_id"
-          placeholder="set the property ID"
-          onChange={(e) => {
-            setId(e.target.value);
-          }}
-        />
-        <input
-          type="text"
-          name="category"
-          placeholder="set category"
-          onChange={(e) => {
-            setCategory(e.target.value);
-          }}
-        />
-        <input
-          type="text"
-          name="status"
-          placeholder="set status"
-          onChange={(e) => {
-            setStatus(e.target.value);
-          }}
-        />
-        <input
-          type="text"
-          name="prize"
-          placeholder="set prize"
-          onChange={(e) => {
-            setPrize(e.target.value);
-          }}
-        />
-        <input
-          type="text"
-          name="place"
-          placeholder="set place"
-          onChange={(e) => {
-            setPlace(e.target.value);
-          }}
-        />
-        <button onClick={handleClick}>Create property</button>
-      </form>
     </div>
   );
 }

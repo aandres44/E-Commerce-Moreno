@@ -5,6 +5,7 @@ import { AiOutlineCloseCircle, AiFillHome } from "react-icons/ai";
 import { BiBuildingHouse, BiUserCircle } from "react-icons/bi";
 import "./navbar.css";
 import { IconContext } from "react-icons";
+
 //npm install react-router-dom
 
 const Navbar = () => {
@@ -34,8 +35,14 @@ const Navbar = () => {
       className: "nav-text",
     },
     {
-      title: "Sign up",
-      path: "/sign-up",
+      title: "Login",
+      path: "/Login",
+      icon: <BiUserCircle />,
+      className: "nav-text",
+    },
+    {
+      title: "Add Property",
+      path: "/Add",
       icon: <BiUserCircle />,
       className: "nav-text",
     },
