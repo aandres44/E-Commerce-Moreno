@@ -73,7 +73,7 @@ const Slider = styled.section`
   display: flex;
   flex-wrap: wrap;
   height: 80vh;
-  margin-top: 6%;
+  margin-top: 7%;
 `;
 
 export default Carousel;

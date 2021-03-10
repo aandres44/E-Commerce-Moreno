@@ -4,7 +4,6 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { DataProvider } from "./pages/Form/DataContext";
-import * as serviceWorker from "./ServiceWorker";
 
 ReactDOM.render(
   <React.StrictMode>

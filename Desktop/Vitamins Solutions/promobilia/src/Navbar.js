@@ -42,7 +42,7 @@ const Navbar = () => {
     },
     {
       title: "Add Property",
-      path: "/Add",
+      path: "/form/stepID",
       icon: <BiUserCircle />,
       className: "nav-text",
     },
@@ -52,7 +52,10 @@ const Navbar = () => {
     <IconContext.Provider value={{ color: "#fff" }}>
       <div className="navbar" onClick={showSidebar}>
         <Link to="#" className="menu-bars">
-          <FaBars style={{ fontSize: "30px" }} onClick={showSidebar} />
+          <FaBars
+            style={{ fontSize: "30px", marginBottom: "20px" }}
+            onClick={showSidebar}
+          />
         </Link>
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-menu-items">

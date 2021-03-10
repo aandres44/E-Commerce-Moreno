@@ -4,8 +4,8 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    margin: theme.spacing(8, 0, 2),
-    fontFamily: "Permanent Marker",
+    margin: theme.spacing(7, 0, 2),
+    fontFamily: "Lato",
     textAlign: "center",
     fontSize: "40px",
     color: "#f53b57",
@@ -13,14 +13,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Header = () => {
+export const Header = () => {
   const styles = useStyles();
-
   return (
-    <Typography className={styles.root} component="h1" variant="h5">
-      Eiros Vitaminas
+    <Typography className={styles.root} component="h1">
+      Agregar Propiedad
     </Typography>
   );
 };
-
-export default Header;

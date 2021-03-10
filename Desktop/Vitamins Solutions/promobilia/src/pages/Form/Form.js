@@ -12,10 +12,8 @@ export const Form = ({ children, ...props }) => {
   const styles = useStyles();
 
   return (
-    <form {...props} className={styles.root} noValidate>
+    <form className={styles.root} noValidate {...props}>
       {children}
     </form>
   );
 };
-
-export default Form;

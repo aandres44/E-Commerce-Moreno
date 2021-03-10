@@ -8,14 +8,14 @@ export default function Card(props) {
   let newClassName = `color_bg ${props.alt}`;
   let bg_img = `url(${props.images})`;
   let {
-    title,
-    old_price,
-    newPrice,
-    exp_date,
-    cars,
-    bedrooms,
-    bathrooms,
-    showers,
+    tipoDePropiedad,
+    PrecioDeLaPropiedad,
+    ubicacionDeLaPropiedad,
+    tipoDeOferta,
+    cajonesDeEstacionamiento,
+    recamaras,
+    TotalDeBaños,
+    bañosCompletos,
   } = props;
 
   return (
@@ -37,33 +37,33 @@ export default function Card(props) {
           </svg>
         </div>
         <div className="cardInfo">
-          <h1>{title}</h1>
-          <p className="date_">{exp_date}</p>
+          <h1>{tipoDePropiedad}</h1>
+          <p className="date_">{tipoDeOferta}</p>
           <div className="action">
             <div className="priceGroup">
-              <p className="price old_price">{old_price}</p>
-              <p className="price newPrice">{newPrice}</p>
+              <p className="price old_price">{PrecioDeLaPropiedad}</p>
+              <p className="price newPrice">{ubicacionDeLaPropiedad}</p>
             </div>
             <div>
               <h5 style={{ textDecoration: "underline purple" }}>
                 <span>
                   <BiBed />
                 </span>
-                {"             "} {bedrooms}
+                {"             "} {recamaras}
                 <span>
                   <AiOutlineCar />
                 </span>{" "}
-                {cars}
+                {cajonesDeEstacionamiento}
               </h5>
               <h5 style={{ textDecoration: "underline purple" }}>
                 <span>
                   <GrRestroom />
                 </span>
-                {bathrooms}{" "}
+                {TotalDeBaños}{" "}
                 <span>
                   <GiShower />
                 </span>{" "}
-                {showers}
+                {bañosCompletos}
               </h5>
             </div>
           </div>

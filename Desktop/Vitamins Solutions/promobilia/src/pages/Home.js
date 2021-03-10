@@ -2,13 +2,30 @@ import styled from "@emotion/styled";
 import Carousel from "./Carousel";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Typography from "@material-ui/core/Typography";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    margin: theme.spacing(-3, 0, 2),
+    fontFamily: "Lato",
+    textAlign: "center",
+    fontSize: "40px",
+    color: "#f53b57",
+    textShadow: "1px 1px darkmagenta",
+  },
+}));
 
 const Home = () => {
+  const styles = useStyles();
+
   return (
     <div>
       <Header>
-        <h1 style={{ width: "100%", fontFamily: "Lucida Sans" }}>PROMOBILIA</h1>
-        <h3 style={{ fontFamily: "Lucida Sans", marginTop: "15px" }}>
+        <Typography className={styles.root} component="h1">
+          PROMOBILIA
+        </Typography>
+        <h3 style={{ fontFamily: "Lato", marginTop: "15px" }}>
           Una inmobiliaria muy bonis y ermoza y llena de magia para toda la
           familia y los sobrinos y los reyes magos
         </h3>
@@ -67,21 +84,21 @@ const Header = styled.div`
 `;
 
 const Butt = styled.button`
-  border: 1px solid #00d2d3;
+  border: 1px solid #060b26;
   border-radius: 15px;
   background: none;
   padding: 8px 8px;
   font-family: monospace;
   cursor: pointer;
-  color: #00d2d3;
+  color: #060b26;
   transition: 0.8s;
   position: absolute;
-  top: 90%;
+  top: 90.5%;
   left: 45.2%;
   overflow: hidden;
   &:hover {
     color: white;
-    background: #00d2d3;
+    background: #060b26;
   }
   ::before {
     content: "";
@@ -89,7 +106,7 @@ const Butt = styled.button`
     left: 0;
     width: 100%;
     height: 0%;
-    background: #00d2d3;
+    background: #060b26;
     z-index: -1;
     transition: 0.8s;
     top: 0;

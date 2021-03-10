@@ -16,7 +16,6 @@ const AppEngine = () => {
           <Route path="/propiedades" component={Propiedades} />
           <Route path="/propiedad" component={Propiedad} />
           <Route path="/Login" component={login} />
-          <Route path="/Add" component={AddProperties} />
           <Route path="/form" component={Form} />
         </Switch>
       </Router>
